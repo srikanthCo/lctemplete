@@ -16,6 +16,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(private router: Router,private route: ActivatedRoute,public http: HttpClient) {
     this.id = this.route.snapshot.params['id'];
+    console.log("id")
     this.http.get('http://13.127.87.1/index.php/rest/shops/get')
     .subscribe(res => {
       this.results = res;

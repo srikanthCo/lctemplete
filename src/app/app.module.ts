@@ -10,10 +10,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {LcService} from './services/lc.service';
 import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SubCategoriesComponent } from './components/sub-categories/sub-categories.component';
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
-  {path:'products/:id',component: ProductsComponent}
+  {path:'products/:id',component: ProductsComponent},
+  {path:'sub-categories',component: SubCategoriesComponent}
 ];
 
 @NgModule({
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     HomeComponent,
     NavbarComponent,
     ProductsComponent,
-    FooterComponent
+    FooterComponent,
+    SubCategoriesComponent
   ],
   imports: [
     BrowserModule,
