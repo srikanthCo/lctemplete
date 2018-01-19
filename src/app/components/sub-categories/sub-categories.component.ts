@@ -41,4 +41,31 @@ export class SubCategoriesComponent implements OnInit {
   ngOnInit() {
   }
 
+  subCategory(element){
+    this.subcatid= element.sub_categories[0].id;
+    this.catid = element.id;
+    this.http.get('http://13.127.87.1/index.php/rest/items/get/shop_id/?shop_id='+this.productid+'&sub_cat_id='+this.subcatid+'&item=true&count=all&from=0')
+    .subscribe(res => {
+      this.results = res;
+      this.subcategories = this.results.data;
+      console.log("subcat",this.subcategories);
+      this.subcategories.forEach(element => {
+        element.cover_image_file = "http://13.127.87.1/uploads/" + element.images[0].path;
+      });
+    });
+  }
+
+  swipe(element){
+    this.subcatid= element;
+    this.http.get('http://13.127.87.1/index.php/rest/items/get/shop_id/?shop_id='+this.productid+'&sub_cat_id='+this.subcatid+'&item=true&count=all&from=0')
+    .subscribe(res => {
+      this.results = res;
+      this.subcategories = this.results.data;
+      console.log("subcat",this.subcategories);
+      this.subcategories.forEach(element => {
+        element.cover_image_file = "http://13.127.87.1/uploads/" + element.images[0].path;
+      });
+    });
+  }
+
 }

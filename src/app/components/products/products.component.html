@@ -12,6 +12,11 @@
       </div>
     </div>
   </div>
+  <ul class="nav nav-tabs" *ngIf="product">
+    <li *ngFor="let category of product.categories">
+      <a [routerLink]="['/sub-categories',{productid:id,subcatid:category.sub_categories[0].id,catid:category.id}]">{{category.name}}</a>
+    </li>
+  </ul>
 </div>
 <br>
 <div class="container" *ngIf="product">
