@@ -64,7 +64,7 @@
                       <ul class="thumbnails" *ngIf="results">
                         <li class="span3" *ngFor="let res of results.data">
                           <div class="thumbnail">
-                            <img src={{res.cover_image_file}} [routerLink]="['/products/'+res.id]" alt="" width="100%" style="height: 200px" >
+                            <img src={{res.dashboard_icon}} [routerLink]="['/products/'+res.id]" alt="" width="50%" >
                             <div class="caption">
                                 <h5>{{res.name}}</h5>
                             </div>

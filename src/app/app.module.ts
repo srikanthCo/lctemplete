@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import {LcService} from './services/lc.service';
 import { ProductsComponent } from './components/products/products.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ProductsComponent
+    ProductsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

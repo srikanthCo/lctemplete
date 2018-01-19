@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
       this.results = res;
       this.results.data.forEach(element => {
         element.cover_image_file = "http://13.127.87.1/uploads/" + element.cover_image_file;
+        element.dashboard_icon = "assets/images/"+element.name+".png";
       });
       console.log("results",this.results)
     });
