@@ -17,11 +17,13 @@ export class SubCategoriesComponent implements OnInit {
   product: any;
   results: any;
   subcategories: any;
+  cindex:any;
 
   constructor(private router: Router,private route: ActivatedRoute,public http: HttpClient) {
     this.catid = this.route.snapshot.params['catid'];
     this.productid = this.route.snapshot.params['productid'];
     this.subcatid = this.route.snapshot.params['subcatid'];
+    this.cindex = this.route.snapshot.params['i'];
     this.http.get('http://13.127.87.1/index.php/rest/shops/get')
     .subscribe(res => {
       this.results = res;
@@ -41,7 +43,8 @@ export class SubCategoriesComponent implements OnInit {
   ngOnInit() {
   }
 
-  subCategory(element){
+  subCategory(element,index){
+    this.cindex = index;
     this.subcatid= element.sub_categories[0].id;
     this.catid = element.id;
     this.http.get('http://13.127.87.1/index.php/rest/items/get/shop_id/?shop_id='+this.productid+'&sub_cat_id='+this.subcatid+'&item=true&count=all&from=0')

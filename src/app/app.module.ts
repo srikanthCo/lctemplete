@@ -11,11 +11,13 @@ import {LcService} from './services/lc.service';
 import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubCategoriesComponent } from './components/sub-categories/sub-categories.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'products/:id',component: ProductsComponent},
-  {path:'sub-categories',component: SubCategoriesComponent}
+  {path:'sub-categories',component: SubCategoriesComponent},
+  {path:'sidenav',component:SideNavComponent}
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     ProductsComponent,
     FooterComponent,
-    SubCategoriesComponent
+    SubCategoriesComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

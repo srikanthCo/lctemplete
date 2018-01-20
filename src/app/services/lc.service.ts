@@ -8,6 +8,9 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class LcService {
   results: any;
 
+  private messageSource = new BehaviorSubject<any>("");
+  currentMessage = this.messageSource.asObservable();
+
   constructor(public http: HttpClient) {
     
   }
