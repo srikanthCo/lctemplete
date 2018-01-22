@@ -72,3 +72,33 @@
     margin-right: 0;
     display:block;
   }
+
+  .single-top-right {
+    padding-left: 5em;
+  }
+
+  .single-top-right h3 {
+    text-transform: capitalize;
+    font-size: 2em;
+    color: #f44336;
+    font-family: 'Offside', cursive;
+    margin-bottom: .3em;
+  }  
+
+  .single-rating {
+    margin: 1em 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1em;
+  }
+
+  .single-top-right ul li.rating {
+    margin: 0 1.5em;
+    color: #999;
+    font-size: 1em;
+  }
+
+  .single-top-right ul li {
+    display: inline-block;
+    margin-left: 3px;
+    color: #0280e1;
+  }
