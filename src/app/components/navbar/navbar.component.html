@@ -1,5 +1,8 @@
 
 <div class="topnav">
+  <a [routerLink]="['/login']" *ngIf="!message">login</a>
+  <a [routerLink]="['/register']"  *ngIf="!message">SignUp</a>
+  <a (click)="logout()" *ngIf="message">LogOut</a>
   <a class="active" href="">Free List</a>
   <a href="#news">Advertise</a>
   <a href="#contact">Support</a>

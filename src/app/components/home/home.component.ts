@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,  } from '@angular/common/http';
+import {LcService} from '../../services/lc.service'
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   results: any;
 
-  constructor(public http: HttpClient){
+  constructor(public http: HttpClient,lc:LcService){
     
     // Make the HTTP request:
     this.http.get('http://13.127.87.1/index.php/rest/shops/get')
